@@ -4,17 +4,15 @@ targets:
       json_serializable:
         generate_for:
           include:
-            - lib/features/auth/data/models/**.dart
-            - lib/features/auth/domain/entities/**.dart
-            - lib/data/*/models/**.dart
-            - lib/domain/*/entities/**.dart
+            - lib/data/models/**.dart
+            - lib/core/error/**.dart
         options:
           any_map: false
           checked: false
           create_factory: true
           create_to_json: true
           disallow_unrecognized_keys: false
-          explicit_to_json: false
+          explicit_to_json: true
           field_rename: snake
           generic_argument_factories: false
           ignore_unannotated: false
@@ -22,7 +20,3 @@ targets:
       mockito|mockBuilder:
         generate_for:
           - test/**.dart
-      flutter_sheet_localization_generator|flutter_sheet_localization:
-        enabled: true
-        generate_for:
-          - lib/core/l10n/**.dart

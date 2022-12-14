@@ -9,7 +9,11 @@ environment:
 
 dependencies:
   bloc: ^8.1.0
+  cached_network_image: ^3.2.3
+  card_swiper: ^2.0.4
   dartz: ^0.10.1
+  dio: ^4.0.6
+  dio_smart_retry: ^1.4.0
   equatable: ^2.0.5
   flutter:
     sdk: flutter
@@ -18,11 +22,14 @@ dependencies:
   flutter_launcher_icons: ^0.11.0
   flutter_localizations:
     sdk: flutter
+  get: ^4.6.5
   get_it: ^7.2.0
   google_fonts: ^3.0.1
   infinite_scroll_pagination: ^3.2.0
   intl: ^0.17.0
   json_annotation: ^4.7.0
+  shimmer: ^2.0.0
+  talker_dio_logger: ^1.0.0
 
 dev_dependencies:
   bloc_test: ^9.1.0
@@ -30,8 +37,12 @@ dev_dependencies:
   flutter_native_splash: ^2.0.4
   flutter_test:
     sdk: flutter
+  json_serializable: ^6.5.4
   mocktail: ^0.3.0
   very_good_analysis: ^3.1.0
+
+dependency_overrides:
+  provider: ^6.0.4
 
 flutter:
   uses-material-design: true
