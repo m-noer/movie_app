@@ -3,20 +3,23 @@ import 'dart:ui';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 import 'package:movie_app/core/constants/api_path.dart';
 
 class BlurIBackgroundmage extends StatelessWidget {
   const BlurIBackgroundmage({
     super.key,
     this.imagePath,
+    this.height,
   });
 
   final String? imagePath;
+  final double? height;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: Get.height / 2,
+      height: height ?? Get.height / 2,
       decoration: BoxDecoration(
         image: imagePath != null
             ? DecorationImage(
