@@ -7,4 +7,8 @@ abstract class MoviesRepository {
   Future<Either<Failure, ListMovieEntity>> getMoviesNowPlaying(
     MovieQueryParameter params,
   );
+  Future<Either<Failure, ListMovieEntity>> getMoviesTopRated(
+    MovieQueryParameter params,
+  );
+  Future<Either<Failure, DetailMovieEntity>> getDetailMovie(int id);
 }

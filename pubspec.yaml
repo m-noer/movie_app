@@ -15,6 +15,7 @@ dependencies:
   dio: ^4.0.6
   dio_smart_retry: ^1.4.0
   equatable: ^2.0.5
+  fluentui_system_icons: ^1.1.189
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.1
@@ -28,6 +29,7 @@ dependencies:
   infinite_scroll_pagination: ^3.2.0
   intl: ^0.17.0
   json_annotation: ^4.7.0
+  percent_indicator: ^4.2.2
   shimmer: ^2.0.0
   talker_dio_logger: ^1.0.0
 

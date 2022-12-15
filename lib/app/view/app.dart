@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:movie_app/core/configs/themes/custom_theme.dart';
 import 'package:movie_app/l10n/l10n.dart';
 import 'package:movie_app/presentation/pages/navigation_page.dart';
@@ -8,10 +9,10 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       theme: CustomTheme.lightTheme,
       darkTheme: CustomTheme.darkTheme,
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.dark,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       home: const NavigationPage(),

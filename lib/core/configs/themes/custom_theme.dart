@@ -19,6 +19,7 @@ class CustomTheme {
     iconTheme: const IconThemeData(
       color: Palette.onBackground,
     ),
+    centerTitle: false,
   );
 
   static final inputDecorationTheme = InputDecorationTheme(
@@ -152,7 +153,6 @@ class CustomTheme {
   );
 
   static final darkTheme = ThemeData(
-    
     visualDensity: VisualDensity.adaptivePlatformDensity,
     scaffoldBackgroundColor: Colors.black,
     brightness: Brightness.dark,
@@ -160,19 +160,8 @@ class CustomTheme {
     primaryColorDark: Palette.primaryColorDark,
     primaryColorLight: Palette.primaryColorLight,
     secondaryHeaderColor: Palette.secondaryColorDark,
-    colorScheme: const ColorScheme(
-      primary: Palette.primaryColorLight,
-      primaryVariant: Palette.primaryVariant,
-      secondary: Palette.secondaryColor,
-      secondaryVariant: Palette.secondaryVariant,
-      surface: Palette.surfaceDark,
-      background: Palette.backgroundDark,
-      error: Palette.error,
-      onPrimary: Palette.onPrimary,
-      onSecondary: Palette.onSecondary,
-      onSurface: Palette.onSurfaceDark,
-      onBackground: Palette.onBackgroundDark,
-      onError: Palette.onError,
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: const Color(0xFF6D44C7),
       brightness: Brightness.dark,
     ),
     disabledColor: Palette.disabledColor,
@@ -201,6 +190,7 @@ class CustomTheme {
       color: Palette.onBackgroundDark,
     ),
     cardTheme: CardTheme(
+      color: const Color(0xFF222222),
       margin: const EdgeInsets.only(bottom: 10),
       elevation: 6,
       shadowColor: Colors.black.withOpacity(0.1),

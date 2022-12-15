@@ -1,3 +1,4 @@
+import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 
@@ -16,18 +17,18 @@ class BottomNavigation extends StatelessWidget {
     return BottomNavigationBar(
       items: const [
         BottomNavigationBarItem(
-          icon: Icon(IconlyLight.home),
-          activeIcon: Icon(IconlyBold.home),
-          label: 'Home',
+          icon: Icon(FluentIcons.movies_and_tv_20_regular),
+          activeIcon: Icon(FluentIcons.movies_and_tv_20_filled),
+          label: 'Movies',
         ),
         BottomNavigationBarItem(
-          icon: Icon(IconlyLight.activity),
-          activeIcon: Icon(IconlyBold.activity),
+          icon: Icon(FluentIcons.tv_20_regular),
+          activeIcon: Icon(FluentIcons.tv_20_filled),
           label: 'TV Show',
         ),
         BottomNavigationBarItem(
-          icon: Icon(IconlyLight.setting),
-          activeIcon: Icon(IconlyBold.setting),
+          icon: Icon(FluentIcons.settings_20_regular),
+          activeIcon: Icon(FluentIcons.settings_20_filled),
           label: 'Setting',
         ),
       ],
