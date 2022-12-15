@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 import 'package:movie_app/data/models/models.dart';
 
 import 'package:movie_app/domain/entities/entities.dart';
-import 'package:movie_app/domain/use_cases/get_movies_now_playing_use_case.dart';
+import 'package:movie_app/domain/use_cases/movies/get_movies_now_playing_use_case.dart';
 
 part 'movies_now_playing_state.dart';
 

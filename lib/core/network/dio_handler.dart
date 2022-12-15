@@ -1,7 +1,6 @@
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
-import 'package:dio_smart_retry/dio_smart_retry.dart';
 import 'package:talker_dio_logger/talker_dio_logger.dart';
 
 class DioHandler {
@@ -20,14 +19,6 @@ class DioHandler {
 
     dio.interceptors.addAll(<Interceptor>[
       _loggingInterceptor(),
-      RetryInterceptor(
-        dio: dio,
-        logPrint: log,
-        retryDelays: const [
-          Duration(seconds: 1),
-          Duration(seconds: 3),
-        ],
-      ),
       TalkerDioLogger(
         settings: const TalkerDioLoggerSettings(
           printRequestHeaders: true,

@@ -10,5 +10,11 @@ abstract class MoviesRepository {
   Future<Either<Failure, ListMovieEntity>> getMoviesTopRated(
     MovieQueryParameter params,
   );
+  Future<Either<Failure, ListMovieEntity>> getMoviesUpcoming(
+    MovieQueryParameter params,
+  );
+  Future<Either<Failure, ListMovieEntity>> getMoviesPopular(
+    MovieQueryParameter params,
+  );
   Future<Either<Failure, DetailMovieEntity>> getDetailMovie(int id);
 }

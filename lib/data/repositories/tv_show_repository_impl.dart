@@ -1,23 +1,23 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:movie_app/core/error/failure.dart';
-import 'package:movie_app/data/data_sources/movies_remote_data_source.dart';
+import 'package:movie_app/data/data_sources/tv_show_remote_data_source.dart';
 import 'package:movie_app/data/models/models.dart';
 import 'package:movie_app/domain/entities/detail_movie_entity.dart';
 import 'package:movie_app/domain/entities/list_movie_entity.dart';
-import 'package:movie_app/domain/repositories/movies_repository.dart';
+import 'package:movie_app/domain/repositories/tv_show_repository.dart';
 
-class MoviesRepositoryImpl implements MoviesRepository {
-  MoviesRepositoryImpl(this.remoteDataSource);
+class TvShowRepositoryImpl implements TvShowRepository {
+  TvShowRepositoryImpl(this.remoteDataSource);
 
-  final MoviesRemoteDataSource remoteDataSource;
+  final TvShowRemoteDataSource remoteDataSource;
 
   @override
-  Future<Either<Failure, ListMovieEntity>> getMoviesNowPlaying(
+  Future<Either<Failure, ListMovieEntity>> getTvShowOnAir(
     MovieQueryParameter params,
   ) async {
     try {
-      final remoteData = await remoteDataSource.getMoviesNowPlaying(params);
+      final remoteData = await remoteDataSource.getTvShowOnAir(params);
       return Right(remoteData);
     } on DioError catch (e) {
       // The request was made and the server responded with a status code
@@ -35,11 +35,11 @@ class MoviesRepositoryImpl implements MoviesRepository {
   }
 
   @override
-  Future<Either<Failure, ListMovieEntity>> getMoviesTopRated(
+  Future<Either<Failure, ListMovieEntity>> getTvShowTopRated(
     MovieQueryParameter params,
   ) async {
     try {
-      final remoteData = await remoteDataSource.getMoviesTopRated(params);
+      final remoteData = await remoteDataSource.getTvShowTopRated(params);
       return Right(remoteData);
     } on DioError catch (e) {
       // The request was made and the server responded with a status code
@@ -57,9 +57,9 @@ class MoviesRepositoryImpl implements MoviesRepository {
   }
 
   @override
-  Future<Either<Failure, DetailMovieEntity>> getDetailMovie(int id) async {
+  Future<Either<Failure, DetailMovieEntity>> getDetailTvShow(int id) async {
     try {
-      final remoteData = await remoteDataSource.getDetailMovie(id);
+      final remoteData = await remoteDataSource.getDetailTvShow(id);
       return Right(remoteData);
     } on DioError catch (e) {
       // The request was made and the server responded with a status code
@@ -77,11 +77,11 @@ class MoviesRepositoryImpl implements MoviesRepository {
   }
 
   @override
-  Future<Either<Failure, ListMovieEntity>> getMoviesUpcoming(
+  Future<Either<Failure, ListMovieEntity>> getTvShowAiringToday(
     MovieQueryParameter params,
   ) async {
     try {
-      final remoteData = await remoteDataSource.getMoviesUpcoming(params);
+      final remoteData = await remoteDataSource.getTvShowAiringToday(params);
       return Right(remoteData);
     } on DioError catch (e) {
       // The request was made and the server responded with a status code
@@ -99,11 +99,11 @@ class MoviesRepositoryImpl implements MoviesRepository {
   }
 
   @override
-  Future<Either<Failure, ListMovieEntity>> getMoviesPopular(
+  Future<Either<Failure, ListMovieEntity>> getTvShowPopular(
     MovieQueryParameter params,
   ) async {
     try {
-      final remoteData = await remoteDataSource.getMoviesPopular(params);
+      final remoteData = await remoteDataSource.getTvShowPopular(params);
       return Right(remoteData);
     } on DioError catch (e) {
       // The request was made and the server responded with a status code

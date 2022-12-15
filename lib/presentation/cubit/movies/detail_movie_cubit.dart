@@ -2,7 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 
 import 'package:movie_app/domain/entities/entities.dart';
-import 'package:movie_app/domain/use_cases/get_detail_movie_use_case.dart';
+import 'package:movie_app/domain/use_cases/movies/get_detail_movie_use_case.dart';
 
 part 'detail_movie_state.dart';
 

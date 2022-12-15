@@ -49,7 +49,6 @@ class CustomTheme {
   static final elevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       elevation: 0,
-      primary: Palette.primaryColor,
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
@@ -59,7 +58,6 @@ class CustomTheme {
 
   static final outlinedButtonTheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
-      primary: Palette.primaryColor,
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
@@ -75,7 +73,6 @@ class CustomTheme {
 
   static final outlinedButtonThemeDark = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
-      primary: Palette.primaryColor,
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
@@ -112,20 +109,8 @@ class CustomTheme {
     primaryColorDark: Palette.primaryColorDark,
     primaryColorLight: Palette.primaryColorLight,
     secondaryHeaderColor: Palette.secondaryColorDark,
-    colorScheme: const ColorScheme(
-      primary: Palette.primaryColor,
-      primaryVariant: Palette.primaryVariant,
-      secondary: Palette.secondaryColor,
-      secondaryVariant: Palette.secondaryVariant,
-      surface: Palette.surface,
-      background: Palette.background,
-      error: Palette.error,
-      onPrimary: Palette.onPrimary,
-      onSecondary: Palette.onSecondary,
-      onSurface: Palette.onSurface,
-      onBackground: Palette.onBackground,
-      onError: Palette.onError,
-      brightness: Brightness.light,
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: const Color(0xFF6D44C7),
     ),
     textTheme: textTheme,
     disabledColor: Colors.grey,

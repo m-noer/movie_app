@@ -4,26 +4,26 @@ import 'package:movie_app/core/error/exceptions.dart';
 import 'package:movie_app/data/models/models.dart';
 import 'package:movie_app/domain/entities/entities.dart';
 
-abstract class MoviesRemoteDataSource {
-  Future<ListMovieEntity> getMoviesNowPlaying(MovieQueryParameter params);
-  Future<ListMovieEntity> getMoviesTopRated(MovieQueryParameter params);
-  Future<ListMovieEntity> getMoviesUpcoming(MovieQueryParameter params);
-  Future<ListMovieEntity> getMoviesPopular(MovieQueryParameter params);
-  Future<DetailMovieEntity> getDetailMovie(int id);
+abstract class TvShowRemoteDataSource {
+  Future<ListMovieEntity> getTvShowOnAir(MovieQueryParameter params);
+  Future<ListMovieEntity> getTvShowTopRated(MovieQueryParameter params);
+  Future<ListMovieEntity> getTvShowAiringToday(MovieQueryParameter params);
+  Future<ListMovieEntity> getTvShowPopular(MovieQueryParameter params);
+  Future<DetailMovieEntity> getDetailTvShow(int id);
 }
 
-class MoviesRemoteDataSourceImpl extends MoviesRemoteDataSource {
-  MoviesRemoteDataSourceImpl(this.dio);
+class TvShowRemoteDataSourceImpl extends TvShowRemoteDataSource {
+  TvShowRemoteDataSourceImpl(this.dio);
 
   final Dio dio;
 
   @override
-  Future<ListMovieEntity> getMoviesNowPlaying(
+  Future<ListMovieEntity> getTvShowOnAir(
     MovieQueryParameter params,
   ) async {
     try {
       final response = await dio.get<Map<String, dynamic>>(
-        ApiPath.moviesNowPlaying,
+        ApiPath.tvOnAir,
         queryParameters: params.toJson(),
       );
       return ListMovieModel.fromJson(response.data!);
@@ -39,10 +39,10 @@ class MoviesRemoteDataSourceImpl extends MoviesRemoteDataSource {
   }
 
   @override
-  Future<ListMovieEntity> getMoviesTopRated(MovieQueryParameter params) async {
+  Future<ListMovieEntity> getTvShowTopRated(MovieQueryParameter params) async {
     try {
       final response = await dio.get<Map<String, dynamic>>(
-        ApiPath.moviesTopRated,
+        ApiPath.tvTopRated,
         queryParameters: params.toJson(),
       );
       return ListMovieModel.fromJson(response.data!);
@@ -58,7 +58,7 @@ class MoviesRemoteDataSourceImpl extends MoviesRemoteDataSource {
   }
 
   @override
-  Future<DetailMovieEntity> getDetailMovie(int id) async {
+  Future<DetailMovieEntity> getDetailTvShow(int id) async {
     try {
       final response = await dio.get<Map<String, dynamic>>(
         '${ApiPath.movie}/$id',
@@ -76,10 +76,12 @@ class MoviesRemoteDataSourceImpl extends MoviesRemoteDataSource {
   }
 
   @override
-  Future<ListMovieEntity> getMoviesUpcoming(MovieQueryParameter params) async {
+  Future<ListMovieEntity> getTvShowAiringToday(
+    MovieQueryParameter params,
+  ) async {
     try {
       final response = await dio.get<Map<String, dynamic>>(
-        ApiPath.moviesUpcoming,
+        ApiPath.tvAiringToday,
         queryParameters: params.toJson(),
       );
       return ListMovieModel.fromJson(response.data!);
@@ -95,10 +97,10 @@ class MoviesRemoteDataSourceImpl extends MoviesRemoteDataSource {
   }
 
   @override
-  Future<ListMovieEntity> getMoviesPopular(MovieQueryParameter params) async {
+  Future<ListMovieEntity> getTvShowPopular(MovieQueryParameter params) async {
     try {
       final response = await dio.get<Map<String, dynamic>>(
-        ApiPath.moviesPopular,
+        ApiPath.tvPopular,
         queryParameters: params.toJson(),
       );
       return ListMovieModel.fromJson(response.data!);

@@ -7,22 +7,20 @@ part 'movie_model.g.dart';
 class MovieModel extends MovieEntity {
   const MovieModel({
     super.backdropPath,
-    required super.adult,
     required super.genreIds,
     required super.id,
     required super.originalLanguage,
-    required super.originalTitle,
     required super.overview,
     required super.popularity,
     super.posterPath,
-    required super.releaseDate,
+    super.releaseDate,
+    super.firstAirDate,
     required super.title,
-    required super.video,
+    required super.name,
     required super.voteAverage,
     required super.voteCount,
   });
 
   factory MovieModel.fromJson(Map<String, dynamic> json) =>
-        _$MovieModelFromJson(json);
-
+      _$MovieModelFromJson(json);
 }

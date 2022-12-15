@@ -13,5 +13,5 @@ class Failure {
       _$FailureFromJson(json);
 
   final String? statusMessage;
-  final String? statusCode;
+  final int? statusCode;
 }

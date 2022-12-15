@@ -8,18 +8,17 @@ part of 'movie_model.dart';
 
 MovieModel _$MovieModelFromJson(Map<String, dynamic> json) => MovieModel(
       backdropPath: json['backdrop_path'] as String?,
-      adult: json['adult'] as bool,
       genreIds:
           (json['genre_ids'] as List<dynamic>).map((e) => e as int).toList(),
       id: json['id'] as int,
       originalLanguage: json['original_language'] as String,
-      originalTitle: json['original_title'] as String,
       overview: json['overview'] as String,
       popularity: (json['popularity'] as num).toDouble(),
       posterPath: json['poster_path'] as String?,
-      releaseDate: json['release_date'] as String,
-      title: json['title'] as String,
-      video: json['video'] as bool,
+      releaseDate: json['release_date'] as String?,
+      firstAirDate: json['first_air_date'] as String?,
+      title: json['title'] as String?,
+      name: json['name'] as String?,
       voteAverage: (json['vote_average'] as num).toDouble(),
       voteCount: json['vote_count'] as int,
     );

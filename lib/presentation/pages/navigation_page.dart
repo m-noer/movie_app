@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/presentation/pages/home_page.dart';
+import 'package:movie_app/presentation/pages/movies/movie_page.dart';
+import 'package:movie_app/presentation/pages/tv_show/tv_show_page.dart';
 import 'package:movie_app/presentation/widgets/bottom_navigation.dart';
 
 class NavigationPage extends StatefulWidget {
@@ -13,9 +14,8 @@ class _NavigationPageState extends State<NavigationPage> {
   final _selectedIndex = ValueNotifier<int>(0);
 
   final _pages = <Widget>[
-    const HomePage(),
-    const HomePage(),
-    const HomePage(),
+    const MoviePage(),
+    const TvShowPage(),
   ];
 
   @override
