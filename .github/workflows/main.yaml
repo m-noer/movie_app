@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: subosito/flutter-action@vv2.8.0
+      - uses: subosito/flutter-action@v2.8.0
 
       - name: Install Dependencies
         run: flutter packages get

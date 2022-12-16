@@ -34,9 +34,13 @@ icon:
 splash:
 	flutter pub run flutter_native_splash:create --path=flutter_native_splash.yaml
 
-.Nero: staging
-staging:
+.Nero: apk_staging
+apk_staging:
 	flutter build apk --flavor staging -t lib/main_staging.dart
+
+.Nero: apk_production
+apk_production:
+	flutter build apk --flavor production -t lib/main_production.dart
 
 .Nero: production
 production:
