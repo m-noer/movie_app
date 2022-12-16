@@ -14,6 +14,7 @@ class App extends StatelessWidget {
         Get.put<RouteObserver>(RouteObserver<PageRoute<dynamic>>());
 
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: CustomTheme.lightTheme,
       darkTheme: CustomTheme.darkTheme,
       themeMode: ThemeMode.dark,
