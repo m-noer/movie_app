@@ -20,5 +20,5 @@ class DetailTvShowFailure extends DetailTvShowState {
 class DetailTvShowSuccess extends DetailTvShowState {
   const DetailTvShowSuccess(this.data);
 
-  final DetailMovieEntity data;
+  final DetailTvShowEntity data;
 }

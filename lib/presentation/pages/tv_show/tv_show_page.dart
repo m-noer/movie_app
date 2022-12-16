@@ -120,9 +120,7 @@ class _TvShowPageState extends State<TvShowPage> {
   Widget _onAirTvShow() {
     return BlocBuilder<TvShowOnAirCubit, TvShowOnAirState>(
       builder: (context, state) {
-        if (state is TvShowOnAirFailure) {
-          return const Text('data');
-        } else if (state is TvShowOnAirSuccess) {
+        if (state is TvShowOnAirSuccess) {
           final data = state.data;
 
           return BackgroundBlurCarousel(

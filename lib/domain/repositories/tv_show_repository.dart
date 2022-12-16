@@ -16,5 +16,5 @@ abstract class TvShowRepository {
   Future<Either<Failure, ListMovieEntity>> getTvShowPopular(
     MovieQueryParameter params,
   );
-  Future<Either<Failure, DetailMovieEntity>> getDetailTvShow(int id);
+  Future<Either<Failure, DetailTvShowEntity>> getDetailTvShow(int id);
 }

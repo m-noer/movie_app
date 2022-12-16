@@ -10,13 +10,13 @@ import 'package:movie_app/core/constants/api_path.dart';
 import 'package:movie_app/domain/entities/entities.dart';
 import 'package:movie_app/presentation/widgets/vote_average.dart';
 
-class DetailMovieContent extends StatelessWidget {
-  const DetailMovieContent({
+class DetailTvShowContent extends StatelessWidget {
+  const DetailTvShowContent({
     super.key,
     required this.data,
   });
 
-  final DetailMovieEntity data;
+  final DetailTvShowEntity data;
 
   @override
   Widget build(BuildContext context) {
@@ -85,7 +85,7 @@ class DetailMovieContent extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  data.title,
+                                  data.name,
                                   style: Theme.of(context).textTheme.titleLarge,
                                 ),
                                 const SizedBox(height: 2),
@@ -99,23 +99,22 @@ class DetailMovieContent extends StatelessWidget {
                                       children: [
                                         Text(
                                           DateFormat('dd MMMM yyyy').format(
-                                            DateTime.parse(data.releaseDate),
+                                            DateTime.parse(data.firstAirDate),
                                           ),
                                           style: Theme.of(context)
                                               .textTheme
                                               .bodyMedium,
                                         ),
                                         const SizedBox(height: 8),
-                                        if (data.productionCompanies.isNotEmpty)
-                                          Text(
-                                            data.productionCompanies.first.name,
-                                            style: Theme.of(context)
-                                                .textTheme
-                                                .bodyMedium
-                                                ?.copyWith(
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                          ),
+                                        Text(
+                                          '${data.numberOfEpisodes} Episode',
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .bodyMedium
+                                              ?.copyWith(
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                        ),
                                       ],
                                     ),
                                     if (data.voteAverage != 0.0)

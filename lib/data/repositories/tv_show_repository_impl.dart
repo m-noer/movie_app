@@ -3,8 +3,7 @@ import 'package:dio/dio.dart';
 import 'package:movie_app/core/error/failure.dart';
 import 'package:movie_app/data/data_sources/tv_show_remote_data_source.dart';
 import 'package:movie_app/data/models/models.dart';
-import 'package:movie_app/domain/entities/detail_movie_entity.dart';
-import 'package:movie_app/domain/entities/list_movie_entity.dart';
+import 'package:movie_app/domain/entities/entities.dart';
 import 'package:movie_app/domain/repositories/tv_show_repository.dart';
 
 class TvShowRepositoryImpl implements TvShowRepository {
@@ -57,7 +56,7 @@ class TvShowRepositoryImpl implements TvShowRepository {
   }
 
   @override
-  Future<Either<Failure, DetailMovieEntity>> getDetailTvShow(int id) async {
+  Future<Either<Failure, DetailTvShowEntity>> getDetailTvShow(int id) async {
     try {
       final remoteData = await remoteDataSource.getDetailTvShow(id);
       return Right(remoteData);

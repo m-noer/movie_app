@@ -59,10 +59,9 @@ class _BackgroundBlurCarouselState extends State<BackgroundBlurCarousel> {
                           arguments: widget.data[index].id,
                         );
                       } else {
-                        Get.snackbar(
-                          'Info!',
-                          'Under Maintenance',
-                          backgroundColor: Colors.blue,
+                        Get.toNamed<void>(
+                          '${NamedRoutes.detailTvShow}/${widget.data[index].id}',
+                          arguments: widget.data[index].id,
                         );
                       }
                     },

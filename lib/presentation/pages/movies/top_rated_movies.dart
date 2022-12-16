@@ -8,6 +8,7 @@ import 'package:movie_app/data/models/models.dart';
 import 'package:movie_app/domain/entities/entities.dart';
 import 'package:movie_app/presentation/contents/list_movie_content.dart';
 import 'package:movie_app/presentation/cubit/movies/movies_top_rated_cubit.dart';
+import 'package:movie_app/presentation/widgets/background_blur_carousel.dart';
 
 class TopRatedMoviePage extends StatefulWidget {
   const TopRatedMoviePage({super.key});
@@ -72,6 +73,7 @@ class _TopRatedMoviePageState extends State<TopRatedMoviePage> {
           body: ListMovieContent(
             backgroundImage: _backgroundImage,
             pagingController: _pagingController,
+            typeShow: TypeShow.movie,
           ),
         ),
       ),

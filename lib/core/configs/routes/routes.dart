@@ -6,6 +6,7 @@ import 'package:movie_app/presentation/pages/movies/top_rated_movies.dart';
 import 'package:movie_app/presentation/pages/movies/upcoming_movies_page.dart';
 import 'package:movie_app/presentation/pages/navigation_page.dart';
 import 'package:movie_app/presentation/pages/tv_show/airing_today_tv_page.dart';
+import 'package:movie_app/presentation/pages/tv_show/detail_tv_show_page.dart';
 import 'package:movie_app/presentation/pages/tv_show/popular_tv_page.dart';
 import 'package:movie_app/presentation/pages/tv_show/top_rated_tv_page.dart';
 
@@ -32,8 +33,8 @@ class Routes {
       page: () => const UpcomingMoviePage(),
     ),
     GetPage<void>(
-      name: NamedRoutes.detailTvShow,
-      page: () => DetailMoviePage(id: Get.arguments as int),
+      name: NamedRoutes.detailTvShowId,
+      page: () => DetailTvShowPage(id: Get.arguments as int),
     ),
     GetPage<void>(
       name: NamedRoutes.popularTvShowPage,

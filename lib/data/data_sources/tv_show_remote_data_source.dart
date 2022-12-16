@@ -9,7 +9,7 @@ abstract class TvShowRemoteDataSource {
   Future<ListMovieEntity> getTvShowTopRated(MovieQueryParameter params);
   Future<ListMovieEntity> getTvShowAiringToday(MovieQueryParameter params);
   Future<ListMovieEntity> getTvShowPopular(MovieQueryParameter params);
-  Future<DetailMovieEntity> getDetailTvShow(int id);
+  Future<DetailTvShowEntity> getDetailTvShow(int id);
 }
 
 class TvShowRemoteDataSourceImpl extends TvShowRemoteDataSource {
@@ -58,12 +58,12 @@ class TvShowRemoteDataSourceImpl extends TvShowRemoteDataSource {
   }
 
   @override
-  Future<DetailMovieEntity> getDetailTvShow(int id) async {
+  Future<DetailTvShowEntity> getDetailTvShow(int id) async {
     try {
       final response = await dio.get<Map<String, dynamic>>(
-        '${ApiPath.movie}/$id',
+        '${ApiPath.tv}/$id',
       );
-      return DetailMovieModel.fromJson(response.data!);
+      return DetailTvShowModel.fromJson(response.data!);
     } on DioError catch (e) {
       throw DioError(
         requestOptions: e.requestOptions,

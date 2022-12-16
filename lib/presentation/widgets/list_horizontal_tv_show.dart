@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:movie_app/core/configs/routes/named_routes.dart';
 
 import 'package:movie_app/domain/entities/entities.dart';
 import 'package:movie_app/presentation/widgets/movie_card.dart';
@@ -48,7 +50,10 @@ class ListHorizontalTvShow extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: data.length > 5 ? 5 : data.length,
               itemBuilder: (context, index) => MovieCard(
-                onTap: () {},
+                onTap: () => Get.toNamed<void>(
+                  '${NamedRoutes.detailTvShow}/${data[index].id}',
+                  arguments: data[index].id,
+                ),
                 data: data[index],
               ),
             ),
