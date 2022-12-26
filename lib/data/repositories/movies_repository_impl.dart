@@ -22,15 +22,10 @@ class MoviesRepositoryImpl implements MoviesRepository {
     } on DioError catch (e) {
       // The request was made and the server responded with a status code
       // that falls out of the range of 2xx and is also not 304.
-      if (e.response != null) {
-        return Left(Failure.fromJson(e.response!.data as Map<String, dynamic>));
-      } else {
-        // Something happened in setting up or sending the request
-        //that triggered an Error
-        return Left(Failure(statusMessage: e.message));
-      }
+
+      return Left(Failure.fromJson(e.response?.data as Map<String, dynamic>));
     } catch (e) {
-      return Left(Failure(statusMessage: e.toString()));
+      return const Left(Failure(statusMessage: 'Error'));
     }
   }
 
@@ -44,15 +39,10 @@ class MoviesRepositoryImpl implements MoviesRepository {
     } on DioError catch (e) {
       // The request was made and the server responded with a status code
       // that falls out of the range of 2xx and is also not 304.
-      if (e.response != null) {
-        return Left(Failure.fromJson(e.response!.data as Map<String, dynamic>));
-      } else {
-        // Something happened in setting up or sending the request
-        //that triggered an Error
-        return Left(Failure(statusMessage: e.message));
-      }
+
+      return Left(Failure.fromJson(e.response?.data as Map<String, dynamic>));
     } catch (e) {
-      return Left(Failure(statusMessage: e.toString()));
+      return const Left(Failure(statusMessage: 'Error'));
     }
   }
 
@@ -64,15 +54,10 @@ class MoviesRepositoryImpl implements MoviesRepository {
     } on DioError catch (e) {
       // The request was made and the server responded with a status code
       // that falls out of the range of 2xx and is also not 304.
-      if (e.response != null) {
-        return Left(Failure.fromJson(e.response!.data as Map<String, dynamic>));
-      } else {
-        // Something happened in setting up or sending the request
-        //that triggered an Error
-        return Left(Failure(statusMessage: e.message));
-      }
+
+      return Left(Failure.fromJson(e.response?.data as Map<String, dynamic>));
     } catch (e) {
-      return Left(Failure(statusMessage: e.toString()));
+      return const Left(Failure(statusMessage: 'Error'));
     }
   }
 
@@ -86,15 +71,10 @@ class MoviesRepositoryImpl implements MoviesRepository {
     } on DioError catch (e) {
       // The request was made and the server responded with a status code
       // that falls out of the range of 2xx and is also not 304.
-      if (e.response != null) {
-        return Left(Failure.fromJson(e.response!.data as Map<String, dynamic>));
-      } else {
-        // Something happened in setting up or sending the request
-        //that triggered an Error
-        return Left(Failure(statusMessage: e.message));
-      }
+
+      return Left(Failure.fromJson(e.response?.data as Map<String, dynamic>));
     } catch (e) {
-      return Left(Failure(statusMessage: e.toString()));
+      return const Left(Failure(statusMessage: 'Error'));
     }
   }
 
@@ -108,15 +88,10 @@ class MoviesRepositoryImpl implements MoviesRepository {
     } on DioError catch (e) {
       // The request was made and the server responded with a status code
       // that falls out of the range of 2xx and is also not 304.
-      if (e.response != null) {
-        return Left(Failure.fromJson(e.response!.data as Map<String, dynamic>));
-      } else {
-        // Something happened in setting up or sending the request
-        //that triggered an Error
-        return Left(Failure(statusMessage: e.message));
-      }
+
+      return Left(Failure.fromJson(e.response?.data as Map<String, dynamic>));
     } catch (e) {
-      return Left(Failure(statusMessage: e.toString()));
+      return const Left(Failure(statusMessage: 'Error'));
     }
   }
 }
