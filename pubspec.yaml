@@ -31,7 +31,7 @@ dependencies:
   json_annotation: ^4.7.0
   percent_indicator: ^4.2.2
   shimmer: ^2.0.0
-  talker_dio_logger: ^1.0.0
+  talker_dio_logger: ^1.0.2
 
 dev_dependencies:
   bloc_test: ^9.1.0
