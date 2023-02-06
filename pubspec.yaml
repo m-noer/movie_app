@@ -8,7 +8,7 @@ environment:
   flutter: 3.3.8
 
 dependencies:
-  bloc: ^8.1.0
+  bloc: ^8.1.1
   cached_network_image: ^3.2.3
   card_swiper: ^2.0.4
   dartz: ^0.10.1
