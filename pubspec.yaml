@@ -18,7 +18,7 @@ dependencies:
   fluentui_system_icons: ^1.1.190
   flutter:
     sdk: flutter
-  flutter_bloc: ^8.1.1
+  flutter_bloc: ^8.1.2
   flutter_iconly: ^1.0.2
   flutter_launcher_icons: ^0.11.0
   flutter_localizations:
