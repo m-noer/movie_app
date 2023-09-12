@@ -15,7 +15,7 @@ dependencies:
   dio: ^4.0.6
   dio_smart_retry: ^1.4.0
   equatable: ^2.0.5
-  fluentui_system_icons: ^1.1.190
+  fluentui_system_icons: ^1.1.214
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.1
